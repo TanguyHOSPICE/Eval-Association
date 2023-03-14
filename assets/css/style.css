@@ -49,6 +49,8 @@ header {
 	text-shadow: 4px 4px 2px rgba(246, 242, 242, 0.898);
 	border: rgba(0, 0, 0, 0.847) solid 2px !important;
 	font-size: 2.3rem;
+	min-width: 350px;
 }
 .btn-special:focus {
+	outline: none;
 }
