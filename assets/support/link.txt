@@ -1,0 +1,11 @@
+navbar:
+https://getbootstrap.com/docs/5.0/components/navbar/
+
+grid:
+https://getbootstrap.com/docs/5.0/layout/grid/
+
+btn:
+https://getbootstrap.com/docs/5.0/components/buttons/#button-tags
+
+scroll:
+https://getbootstrap.com/docs/5.0/components/scrollspy/
