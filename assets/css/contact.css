@@ -1,0 +1,59 @@
+.contact {
+	min-height: 700px !important;
+}
+.check-content {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
+}
+/* btn */
+.btn-contact-send {
+	background: #ffffff00;
+	border: white solid 1px !important;
+	min-width: 280px !important;
+	transition: 0.5s;
+	color: white !important;
+	font-size: 1.2rem !important;
+	font-weight: lighter !important;
+}
+.btn-contact-send:hover {
+	transition: 0.5s;
+	min-width: 350px !important;
+	font-size: 1.6rem !important;
+}
+.btn-contact-send:focus {
+	outline: none;
+}
+
+.bg-grey {
+	background: #141414 !important;
+}
+/* form */
+.form-control {
+	border-bottom: white solid 2px !important;
+	border-top: none !important;
+	border-right: none !important;
+	border-left: white solid 2px !important;
+	background: rgba(33, 33, 33, 0) !important;
+	border-radius: 0px !important;
+}
+.form-control:focus {
+	background: rgba(0, 0, 0, 0);
+	outline: none !important;
+	box-shadow: none !important;
+}
+.form-group {
+	padding: 10px !important;
+}
+.contact-contenue {
+	margin: auto !important;
+	text-align: center !important;
+}
+.form-contact {
+	margin: auto !important;
+}
+#join-checked,
+#payment-row {
+	opacity: 1; /* !provisoire */
+}
