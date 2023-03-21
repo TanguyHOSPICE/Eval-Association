@@ -65,11 +65,15 @@
               ci-dessous</span>
           </div>
           <!-- TODO: MN.1 mettre sur une ligne -->
-          <div class="row-filter">
-            <input type="radio" name="filter_post_federation" id="filter_post_federation">
-            <label for="filter_post_federation">Actualités nationales</label>
-            <input type="radio" name="filter_post_departement" id="filter_post_departement">
-            <label for="filter_post_departement">Actualités départementales</label>
+          <div class="row-filter row">
+            <div class="input-box">
+              <input type="radio" name="filter_post_federation" id="filter_post_federation">
+              <label for="filter_post_federation">Actualités nationales</label>
+            </div>
+            <div class="input-box">
+              <input type="radio" name="filter_post_departement" id="filter_post_departement">
+              <label for="filter_post_departement">Actualités départementales</label>
+            </div>
             <div class="select-container-departement">
               <select name="filter_select_departement" id="filter_select_departement"
                 class="form-select form-select-sm mb-3 " aria-label=".form-select-sm">
@@ -104,10 +108,10 @@
 
           <ul id="group_filter">
             <div class="row">
-              <li class="card col-sm-6 col-xs-6">
+              <li class="card card col-sm-6 col-xs-6">
                 <!-- TODO: MN.3 Ajout link*8 -->
                 <a href="#">
-                  <div class="col-sm-6 col-xs-12">
+                  <div id="border-CS" class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#1.jpg" alt="Twins in front of computer" width="150px"
                       height="150px" class="card-img-center">
                   </div>
@@ -125,12 +129,12 @@
                   </div>
                 </a>
               </li>
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#2.jpg" alt="Strollers" width="150px" height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r5">Bas-Rhin</div>
                     <div class="actu-date">22 <br> Avril <br> 2023</div>
                     <div class="actu-title card-title">
@@ -147,13 +151,13 @@
             </div>
 
             <div class="row">
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#3.jpg" alt="Super national nurse day" width="150px"
                       height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r2">Alpes-Maritimes</div>
                     <div class="actu-date">06 <br> Mai <br> 2023</div>
                     <div class="actu-title card-title">
@@ -167,12 +171,12 @@
                   </div>
                 </a>
               </li>
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#4.jpg" alt="Toasted meeting" width="150px" height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r19">Finistère</div>
                     <div class="actu-date">10 <br> Mai <br> 2023</div>
                     <div class="actu-title card-title">
@@ -189,12 +193,12 @@
             </div>
 
             <div class="row">
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#5.jpg" alt="Child activities" width="150px" height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r20">Gard</div>
                     <div class="actu-date">01 <br> Juin <br> 2023</div>
                     <div class="actu-title card-title">
@@ -208,12 +212,12 @@
                   </div>
                 </a>
               </li>
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#6.jpg" alt="Child studies" width="150px" height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r6">Bouches-du-Rhones</div>
                     <div class="actu-date">23 <br> Juin <br> 2023</div>
                     <div class="actu-title card-title">
@@ -230,12 +234,12 @@
             </div>
 
             <div class="row">
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#7.jpg" alt="black friday" width="150px" height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r11">Corrèze</div>
                     <div class="actu-date">29 <br> Septembre <br> 2023</div>
                     <div class="actu-title card-title">
@@ -249,13 +253,13 @@
                   </div>
                 </a>
               </li>
-              <li class="col-sm-6 col-xs-6">
+              <li class="card col-sm-6 col-xs-6">
                 <a href="#">
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news#8.jpg" alt="twin kitchen activities" width="150px"
                       height="150px">
                   </div>
-                  <div class="col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
                     <div class="regions" id="r12">Côte-d'Or</div>
                     <div class="actu-date">01 <br> Octobre <br> 2023</div>
                     <div class="actu-title card-title">
