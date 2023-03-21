@@ -71,152 +71,205 @@
             <input type="radio" name="filter_post_departement" id="filter_post_departement">
             <label for="filter_post_departement">Actualités départementales</label>
             <div class="select-container-departement">
-              <select name="filter_select_departement" id="filter_select_departement">
-                <option value="all" selected="selected">Tous les départements</option>
-                <opion value="1">Allier</opion>
-                <opion value="2">Alpes-Maritimes</opion>
-                <opion value="3">Aude</opion>
-                <opion value="4">Aveyron</opion>
-                <opion value="5">Bas-Rhin</opion>
-                <opion value="6">Bouches-du-Rhones</opion>
-                <opion value="7">Calvados</opion>
-                <opion value="8">Charente</opion>
-                <opion value="9">Charente-Maritime</opion>
-                <opion value="10">Cher</opion>
-                <opion value="11">Corrèze</opion>
-                <opion value="12">Côte-d'Or</opion>
-                <opion value="13">Deux-Sèvres</opion>
-                <opion value="14">Dordogne</opion>
-                <opion value="15">Doubs</opion>
-                <opion value="16">Drôme</opion>
-                <opion value="17">Essonne</opion>
-                <opion value="18">Eure-et-Loir</opion>
-                <opion value="19">Finistère</opion>
-                <opion value="20">Gard</opion>
-                <opion value="21">Gironde</opion>
-                <opion value="22">Haut-Rhin</opion>
-                <opion value="23">Marne</opion>
+              <select name="filter_select_departement" id="filter_select_departement"
+                class="form-select form-select-sm mb-3 " aria-label=".form-select-sm">
+                <option value="#" selected>Tous les départements</option>
+                <opion name="r1" value="Allier">Allier</opion>
+                <opion name="r2" value="Alpes-Maritimes">Alpes-Maritimes</opion>
+                <opion name="r3" value="Aude">Aude</opion>
+                <opion name="r4" value="Aveyron">Aveyron</opion>
+                <opion name="r5" value="Bas-Rhin">Bas-Rhin</opion>
+                <opion name="r6" value="Bouches-du-Rhones">Bouches-du-Rhones</opion>
+                <opion name="r7" value="Calvados">Calvados</opion>
+                <opion name="r8" value="Charente">Charente</opion>
+                <opion name="r9" value="Charente-Maritime">Charente-Maritime</opion>
+                <opion name="r10" value="Cher">Cher</opion>
+                <opion name="r11" value="Corrèze">Corrèze</opion>
+                <opion name="r12" value="Côte-d'Or">Côte-d'Or</opion>
+                <opion name="r13" value="Deux-Sèvres">Deux-Sèvres</opion>
+                <opion name="r14" value="Dordogne">Dordogne</opion>
+                <opion name="r15" value="Doubs">Doubs</opion>
+                <opion name="r16" value="Drôme">Drôme</opion>
+                <opion name="r17" value="Essonne">Essonne</opion>
+                <opion name="r18" value="Eure-et-Loir">Eure-et-Loir</opion>
+                <opion name="r19" value="Finistère">Finistère</opion>
+                <opion name="r20" value="Gard">Gard</opion>
+                <opion name="r21" value="Gironde">Gironde</opion>
+                <opion name="r22" value="Haut-Rhin">Haut-Rhin</opion>
+                <opion name="r23" value="Marne">Marne</opion>
               </select>
             </div>
 
           </div>
+
           <ul id="group_filter">
-            <li class="col-sm-6 col-xs-6">
-              <!-- TODO: MN.2 Ajout photos*8 w150 & h150 -->
-              <!-- TODO: MN.3 Ajout link*8 -->
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#1.jpg" alt="Twins in front of computer" width="150px"
-                    height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <!-- TODO: MN.4 Ajout (régions & dates & titres)*8 -->
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#2.jpg" alt="Strollers" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#3.jpg" alt="Super national nurse day" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#4.jpg" alt="Toasted meeting" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#5.jpg" alt="Child activities" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#6.jpg" alt="Child studies" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#7.jpg" alt="black friday" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
-            <li class="col-sm-6 col-xs-6">
-              <a href="#" class="row">
-                <div class="col-sm-6 col-xs-12">
-                  <img src="/assets/media/twins-news#8.jpg" alt="twin kitchen activities" width="150px" height="150px">
-                </div>
-                <div class="col-sm-6 col-xs-6 right-part-list">
-                  <div class="regions"></div>
-                  <div class="actu-date"></div>
-                  <div class="actu-title"></div>
-                  <div class="actu-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, itaque.
-                    Assumenda ullam quia commodi placeat?</div>
-                </div>
-              </a>
-            </li>
+            <div class="row">
+              <li class="card col-sm-6 col-xs-6">
+                <!-- TODO: MN.3 Ajout link*8 -->
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#1.jpg" alt="Twins in front of computer" width="150px"
+                      height="150px" class="card-img-center">
+                  </div>
+                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r23">Marne</div>
+                    <div class="actu-date">01 <br> Avril <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Rapport Jumeaux Jumeaux
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#2.jpg" alt="Strollers" width="150px" height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r5">Bas-Rhin</div>
+                    <div class="actu-date">22 <br> Avril <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Les actus : équipement double
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+            </div>
+
+            <div class="row">
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#3.jpg" alt="Super national nurse day" width="150px"
+                      height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r2">Alpes-Maritimes</div>
+                    <div class="actu-date">06 <br> Mai <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Colloque sur la Zygocité
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#4.jpg" alt="Toasted meeting" width="150px" height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r19">Finistère</div>
+                    <div class="actu-date">10 <br> Mai <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Venez parler de vos jumeaux
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+            </div>
+
+            <div class="row">
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#5.jpg" alt="Child activities" width="150px" height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r20">Gard</div>
+                    <div class="actu-date">01 <br> Juin <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Doublement manuel
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#6.jpg" alt="Child studies" width="150px" height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r6">Bouches-du-Rhones</div>
+                    <div class="actu-date">23 <br> Juin <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Activités de lectures à 3 !
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+            </div>
+
+            <div class="row">
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#7.jpg" alt="black friday" width="150px" height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r11">Corrèze</div>
+                    <div class="actu-date">29 <br> Septembre <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Black Friday Jumeaux
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+              <li class="col-sm-6 col-xs-6">
+                <a href="#">
+                  <div class="col-sm-6 col-xs-12">
+                    <img src="/assets/media/twins-news#8.jpg" alt="twin kitchen activities" width="150px"
+                      height="150px">
+                  </div>
+                  <div class="col-sm-6 col-xs-6 right-part-list">
+                    <div class="regions" id="r12">Côte-d'Or</div>
+                    <div class="actu-date">01 <br> Octobre <br> 2023</div>
+                    <div class="actu-title card-title">
+                      <h3>
+                        Cuisiner avec vos Jumeaux
+                      </h3>
+                    </div>
+                    <div class="actu-content card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, itaque.
+                      Assumenda ullam quia commodi placeat?</div>
+                  </div>
+                </a>
+              </li>
+            </div>
           </ul>
         </div>
 
