@@ -22,7 +22,7 @@ a {
 
 /* HEADER*/
 header {
-	background-image: url(/assets/media/bg-header.jpg);
+	background-image: url('/assets/media/bg-header_resized.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -48,7 +48,7 @@ header {
 }
 /* Section Us */
 #us {
-	background-image: url('../media/bg-us.jpg');
+	background-image: url('../media/bg-us_resized.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
@@ -134,7 +134,8 @@ header {
 	border: white solid 1px;
 	border-radius: 50%;
 	padding: 8px;
-	box-shadow: 2px 2px 2px 0px #fff, inset 2px 2px 8px 0px #fff, 5px 4px 7px 3px rgba(255, 255, 255, 0.33);
+	box-shadow: 2px 2px 2px 0px #fff, inset 2px 2px 8px 0px #fff,
+		5px 4px 7px 3px rgba(255, 255, 255, 0.33);
 }
 .conceptor {
 	height: 100px !important;

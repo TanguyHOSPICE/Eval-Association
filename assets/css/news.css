@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+.title_container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Filter */
+.row-filter {
+	width: 100%;
+	display: flex;
+	margin-bottom: 50px;
+}
+.input-box {
+	width: 25% !important;
+	font-size: 0.8rem;
+	display: flex;
+	align-items: center;
+}
+.input-box input {
+	margin-right: 5px;
+}
+.select-container-departement {
+	width: 50% !important;
+}
+
+/* Card */
+ul#group-filter {
+	padding: 0;
+	min-height: 160px;
+	margin-bottom: 10px;
+}
+ul#group-filter > .row {
+	display: inline-block;
+	width: 100%;
+}
+#group-filter li.card {
+	min-height: 180px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+#group-filter a {
+	text-decoration: none;
+	color: black !important;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	width: 460px;
+}
+img {
+	width: 240px;
+	height: 180px;
+	object-fit: cover;
+	outline: none !important;
+	border: none !important;
+}
+.left-part-list {
+	padding-left: 25px;
+}
+/* .card-body {
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.75rem;
+} */
+.card-body .regions {
+	text-align: left;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: #383939;
+	padding-bottom: 10px;
+	position: relative;
+}
+.card-body .regions::after {
+	position: absolute;
+	content: ' ';
+	height: 10px;
+	width: 100%;
+	color: red;
+	top: 0;
+	left: 0;
+	transform: translate(50%, 50%);
+}
+.card-body .actu-date {
+	color: rgba(255, 254, 254, 0.913);
+	background: #383939;
+	text-align: center;
+	float: left;
+	height: 50px;
+	width: 50px;
+	padding-top: 1px;
+	margin-right: 10px;
+	border-radius: 50% 50%;
+	font-weight: bolder;
+	font-size: 12px;
+	line-height: 15px;
+}
+.card-body .actu-title h3 {
+	float: left;
+	height: 50px;
+	max-width: 110px;
+	font-size: 12px;
+	text-align: left;
+	font-weight: bolder;
+	color: #383939;
+}
+.card-body .card-text {
+	color: #383939;
+	clear: both;
+	text-transform: none;
+	padding-top: 10px;
+	text-align: left;
+	font-size: 12px;
+}
+
+/* Responsiv */
+@media screen and (max-width: 991px) {
+	#group_filter a img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	.actu-title {
+		height: 40px;
+	}
+}
+@media (min-width: 768px) {
+	.col-sm-6 {
+		float: right;
+		width: 50%;
+	}
+}
