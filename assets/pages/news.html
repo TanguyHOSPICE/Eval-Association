@@ -64,7 +64,7 @@
             <span class="activities-explications">Filtrer les actualités à l'aide des boutons et de la liste
               ci-dessous</span>
           </div>
-          <!-- TODO: MN.1 mettre sur une ligne -->
+
           <div class="row-filter row">
             <div class="input-box">
               <input type="radio" name="filter_post_federation" id="filter_post_federation">
@@ -75,32 +75,68 @@
               <label for="filter_post_departement">Actualités départementales</label>
             </div>
             <div class="select-container-departement">
-              <select name="filter_select_departement" id="filter_select_departement"
-                class="form-select form-select-sm mb-3 " aria-label=".form-select-sm">
-                <option value="#" selected>Tous les départements</option>
-                <opion name="r1" value="Allier">Allier</opion>
-                <opion name="r2" value="Alpes-Maritimes">Alpes-Maritimes</opion>
-                <opion name="r3" value="Aude">Aude</opion>
-                <opion name="r4" value="Aveyron">Aveyron</opion>
-                <opion name="r5" value="Bas-Rhin">Bas-Rhin</opion>
-                <opion name="r6" value="Bouches-du-Rhones">Bouches-du-Rhones</opion>
-                <opion name="r7" value="Calvados">Calvados</opion>
-                <opion name="r8" value="Charente">Charente</opion>
-                <opion name="r9" value="Charente-Maritime">Charente-Maritime</opion>
-                <opion name="r10" value="Cher">Cher</opion>
-                <opion name="r11" value="Corrèze">Corrèze</opion>
-                <opion name="r12" value="Côte-d'Or">Côte-d'Or</opion>
-                <opion name="r13" value="Deux-Sèvres">Deux-Sèvres</opion>
-                <opion name="r14" value="Dordogne">Dordogne</opion>
-                <opion name="r15" value="Doubs">Doubs</opion>
-                <opion name="r16" value="Drôme">Drôme</opion>
-                <opion name="r17" value="Essonne">Essonne</opion>
-                <opion name="r18" value="Eure-et-Loir">Eure-et-Loir</opion>
-                <opion name="r19" value="Finistère">Finistère</opion>
-                <opion name="r20" value="Gard">Gard</opion>
-                <opion name="r21" value="Gironde">Gironde</opion>
-                <opion name="r22" value="Haut-Rhin">Haut-Rhin</opion>
-                <opion name="r23" value="Marne">Marne</opion>
+              <select name="departement" id="filter_select_departement">
+                <option value="#" selected="selected">Tous les départements</option>
+                <option value="142">Allier</option>
+                <option value="139">Alpes-Maritimes</option>
+                <option value="136">Aude</option>
+                <option value="163">Aveyron</option>
+                <option value="92">Bas-Rhin</option>
+                <option value="169">Bouches-du-Rhône</option>
+                <option value="135">Calvados</option>
+                <option value="134">Charente</option>
+                <option value="133">Charente-Maritime</option>
+                <option value="132">Cher</option>
+                <option value="170">Corrèze</option>
+                <option value="171">Côte-d'Or</option>
+                <option value="187">Deux-Sèvres</option>
+                <option value="146">Dordogne</option>
+                <option value="147">Doubs</option>
+                <option value="172">Drôme</option>
+                <option value="110">Essonne</option>
+                <option value="159">Eure-et-Loir</option>
+                <option value="173">Finistère</option>
+                <option value="160">Gard</option>
+                <option value="162">Gironde</option>
+                <option value="93">Haut-Rhin</option>
+                <option value="165">Haute-Garonne</option>
+                <option value="96">Haute-Savoie</option>
+                <option value="126">Haute-Vienne</option>
+                <option value="181">Hautes-Pyrénées</option>
+                <option value="111">Hauts-de-Seine</option>
+                <option value="174">Hérault</option>
+                <option value="157">Ille-et-Vilaine</option>
+                <option value="155">Indre-et-Loire</option>
+                <option value="175">Isère</option>
+                <option value="154">Jura</option>
+                <option value="188">La Réunion</option>
+                <option value="153">Landes</option>
+                <option value="149">Loire-Atlantique</option>
+                <option value="148">Loiret</option>
+                <option value="88">Lot-et-Garonne</option>
+                <option value="99">Maine-et-Loire</option>
+                <option value="100">Manche</option>
+                <option value="101">Marne</option>
+                <option value="103">Mayenne</option>
+                <option value="104">Meurthe-et-Moselle</option>
+                <option value="106">Morbihan</option>
+                <option value="89">Oise</option>
+                <option value="186">Paris</option>
+                <option value="91">Pas-de-Calais</option>
+                <option value="178">Puy-de-Dôme</option>
+                <option value="179">Pyrénées-Atlantiques</option>
+                <option value="94">Sarthe</option>
+                <option value="108">Seine-et-Marne</option>
+                <option value="107">Seine-Maritime</option>
+                <option value="121">Tarn</option>
+                <option value="114">Val-d'Oise</option>
+                <option value="113">Val-de-Marne</option>
+                <option value="123">Var</option>
+                <option value="124">Vaucluse</option>
+                <option value="125">Vienne</option>
+                <option value="127">Vosges</option>
+                <option value="119">Yonne</option>
+                <option value="109">Yvelines</option>
               </select>
             </div>
 
@@ -115,9 +151,9 @@
                     <img src="../media/twins-news1_resized.jpg" alt="Twins in front of computer"
                       class="card-img-center">
                   </div>
-                  <div id="border-CS" class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r23">Marne</div>
-                    <div class="actu-date">01 <br> Avril <br> 2023</div>
+                    <div class="actu-date">01 <br> Avr. <br> 2023</div>
                     <div class="actu-title card-title">
                       <h3>
                         Rapport Jumeaux Jumeaux
@@ -134,9 +170,9 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news2_resized.jpg" alt="Strollers">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r5">Bas-Rhin</div>
-                    <div class="actu-date">22 <br> Avril <br> 2023</div>
+                    <div class="actu-date">22 <br> Avr. <br> 2023</div>
                     <div class="actu-title card-title">
                       <h3>
                         Les actus : équipement double
@@ -157,7 +193,7 @@
                     <img src="/assets/media/twins-news3_resized.jpg" alt="Super national nurse day" width="150px"
                       height="150px">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r2">Alpes-Maritimes</div>
                     <div class="actu-date">06 <br> Mai <br> 2023</div>
                     <div class="actu-title card-title">
@@ -176,7 +212,7 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news4_resized.jpg" alt="Toasted meeting">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r19">Finistère</div>
                     <div class="actu-date">10 <br> Mai <br> 2023</div>
                     <div class="actu-title card-title">
@@ -198,7 +234,7 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news5_resized.jpg" alt="Child activities">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r20">Gard</div>
                     <div class="actu-date">01 <br> Juin <br> 2023</div>
                     <div class="actu-title card-title">
@@ -217,7 +253,7 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news6_resized.jpg" alt="Child studies">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r6">Bouches-du-Rhones</div>
                     <div class="actu-date">23 <br> Juin <br> 2023</div>
                     <div class="actu-title card-title">
@@ -239,9 +275,9 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news7_resized.jpg" alt="black friday">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r11">Corrèze</div>
-                    <div class="actu-date">29 <br> Septembre <br> 2023</div>
+                    <div class="actu-date">29 <br> Sept. <br> 2023</div>
                     <div class="actu-title card-title">
                       <h3>
                         Black Friday Jumeaux
@@ -258,9 +294,9 @@
                   <div class="col-sm-6 col-xs-12">
                     <img src="/assets/media/twins-news8_resized.jpg" alt="twin kitchen activities">
                   </div>
-                  <div class="card-body col-sm-6 col-xs-6 right-part-list">
+                  <div class="card-body col-sm-6 col-xs-6 Left-part-list">
                     <div class="regions" id="r12">Côte-d'Or</div>
-                    <div class="actu-date">01 <br> Octobre <br> 2023</div>
+                    <div class="actu-date">01 <br> Oct. <br> 2023</div>
                     <div class="actu-title card-title">
                       <h3>
                         Cuisiner avec vos Jumeaux
