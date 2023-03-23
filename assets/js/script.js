@@ -5,9 +5,8 @@ const inputsRadio = document.querySelectorAll('input#join, input#contact, input#
 const inputsTextarea = document.querySelectorAll('textarea');
 
 const allInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
-console.log(allInputs);
 
-let lastname, firstname, email, message;
+let lastname, firstname, email, messageArea;
 
 //Functions display error message
 const errorDisplay = (tag, message, valid) => {
@@ -25,7 +24,7 @@ const errorDisplay = (tag, message, valid) => {
 
 //Function for checking lastname
 const lastnameChecker = (value) => {
-	if (value.length > 0 && (value.length < 2 || value.length <= 20)) {
+	if (value.length > 0 && (value.length < 2 || value.length > 20)) {
 		errorDisplay('lastname', 'Veuillez saisir entre 2 et 20 caractères pour le champ du nom.');
 		lastname = null;
 	} else if (!value.match(/^[a-zA-Z]+$/)) {
@@ -34,6 +33,29 @@ const lastnameChecker = (value) => {
 	} else {
 		errorDisplay('lastname', '', true);
 		lastname = value;
+	}
+};
+//Function for checking firstname
+const firstnameChecker = (value) => {
+	if (value.length > 0 && (value.length < 2 || value.length > 20)) {
+		errorDisplay('firstname', 'Veuillez saisir entre 2 et 20 caractères pour le champ du prénom.');
+		firstname = null;
+	} else if (!value.match(/^[a-zA-Z]+$/)) {
+		errorDisplay('firstname', 'Veuillez saisir uniquement des lettres pour le champ du prénom.');
+		firstname = null;
+	} else {
+		errorDisplay('firstname', '', true);
+		firstname = value;
+	}
+};
+//Function for email address
+const emailChecker = (value) => {
+	if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
+		errorDisplay('email', "L'e-mail n'est pas valide.");
+		email = null;
+	} else {
+		errorDisplay('email', '', true);
+		email = value;
 	}
 };
 
@@ -50,9 +72,6 @@ allInputs.forEach((inputChoiced) => {
 				break;
 			case 'email':
 				emailChecker(e.target.value);
-				break;
-			case 'messageArea':
-				messageChecker(e.target.value);
 				break;
 
 			default:
