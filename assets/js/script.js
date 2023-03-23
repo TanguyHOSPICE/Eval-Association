@@ -1,10 +1,14 @@
 // Inputs radio Join , Contact , Donate
 const inputsRadio = document.querySelectorAll('input#join, input#contact, input#donate');
-
 //Inputs textarea
-const inputsTextarea = document.querySelectorAll('textarea');
-
-const allInputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+const inputsTextarea = document.querySelector('textarea');
+//Email & text inputs
+const allInputs = document.querySelectorAll(
+	'input[type="text"], input[type="email"]',
+	inputsTextarea
+);
+//form
+const form = document.querySelector('form');
 
 let lastname, firstname, email, messageArea;
 
@@ -73,10 +77,38 @@ allInputs.forEach((inputChoiced) => {
 			case 'email':
 				emailChecker(e.target.value);
 				break;
+			case 'messageArea':
+				if (e.target.value.length > 0 && e.target.value.length < 10) {
+					errorDisplay(
+						'messageAera',
+						'Veuillez saisir au moins 10 caractères pour le champ du message.'
+					);
+					messageArea = null;
+				} else {
+					errorDisplay('messageAera', '', true);
+					messageArea = e.target.value;
+				}
 
 			default:
 				null;
 				break;
 		}
 	});
+});
+
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	// If all inputs are valid then send data "to the server"
+	if (lastname && firstname && email) {
+		const data = { lastname, firstname, email, messageArea };
+		console.log(data);
+		// Reset all inputs
+		lastname = null;
+		firstname = null;
+		email = null;
+		messageArea = null;
+		alert("Formulaire validé pour l'exercice !");
+	} else {
+		alert('Tous les champs ne sont pas valides.');
+	}
 });
