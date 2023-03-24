@@ -21,6 +21,7 @@
 	transition: 0.5s;
 	min-width: 350px !important;
 	font-size: 1.6rem !important;
+	font-weight: bold !important;
 }
 .btn-contact-send:focus {
 	outline: none;
@@ -53,7 +54,28 @@
 .form-contact {
 	margin: auto !important;
 }
+
+/* Block masked */
 #join-checked,
 #payment-row {
-	opacity: 1; /* !provisoire */
+	visibility: hidden; /* !provisoire */
+}
+
+span {
+	margin-bottom: 20px;
+	display: block;
+	color: red;
+	transition: 0.3s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.error input {
+	color: red !important;
+	border: 1 px solid rgba(255, 0, 0, 0.527) !important;
+}
+.error span {
+	opacity: 1 !important;
+	visibility: visible;
+	color: red !important;
 }
