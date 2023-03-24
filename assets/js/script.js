@@ -1,16 +1,31 @@
 // Inputs radio Join , Contact , Donate
-const inputsRadio = document.querySelectorAll('input#join, input#contact, input#donate');
-//Inputs textarea
-const inputsTextarea = document.querySelector('textarea');
+const inputRadios = document.querySelectorAll('input#join, input#contact, input#donate');
+
 //Email & text inputs
-const allInputs = document.querySelectorAll(
-	'input[type="text"], input[type="email"]',
-	inputsTextarea
-);
+const allInputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+
 //form
 const form = document.querySelector('form');
 
 let lastname, firstname, email, messageArea;
+
+//fonction pour changer l'attribut checked
+const changeAttribute = () => {
+	checkContent.addEventListener('change', (e) => {
+		//Boucle pour parcourir les inputs radio
+		for (let i = 0; i < inputRadios.length; i++) {
+			//Si l'input radio n'est pas le même que celui coché
+			if (inputRadios[i].id !== inputRadios[i].checked) {
+				//Alors on enlève l'attribut checked
+				inputRadios[i].removeAttribute('checked', '');
+				//Et on ajoute l'attribut checked à l'input radio coché
+				e.target.setAttribute('checked', 'true');
+			}
+		}
+	});
+};
+
+const inputRadiosDisplay = () => {};
 
 //Functions display error message
 const errorDisplay = (tag, message, valid) => {
@@ -62,7 +77,16 @@ const emailChecker = (value) => {
 		email = value;
 	}
 };
-
+//Function for checking message area
+const messageAreaChecker = (value) => {
+	if (value.length > 0 && value.length < 10) {
+		errorDisplay('messageAera', 'Veuillez saisir au moins 10 caractères pour le champ du message.');
+		messageArea = null;
+	} else {
+		errorDisplay('messageAera', '', true);
+		messageArea = value;
+	}
+};
 //Function for checking values of all inputs
 allInputs.forEach((inputChoiced) => {
 	inputChoiced.addEventListener('input', (e) => {
@@ -78,16 +102,8 @@ allInputs.forEach((inputChoiced) => {
 				emailChecker(e.target.value);
 				break;
 			case 'messageArea':
-				if (e.target.value.length > 0 && e.target.value.length < 10) {
-					errorDisplay(
-						'messageAera',
-						'Veuillez saisir au moins 10 caractères pour le champ du message.'
-					);
-					messageArea = null;
-				} else {
-					errorDisplay('messageAera', '', true);
-					messageArea = e.target.value;
-				}
+				messageAreaChecker(e.target.value);
+				break;
 
 			default:
 				null;
@@ -99,7 +115,7 @@ allInputs.forEach((inputChoiced) => {
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	// If all inputs are valid then send data "to the server"
-	if (lastname && firstname && email) {
+	if (lastname && firstname && email && messageArea) {
 		const data = { lastname, firstname, email, messageArea };
 		console.log(data);
 		// Reset all inputs
