@@ -209,9 +209,16 @@ header {
 
 /* Media Queries */
 @media screen and (max-width: 840px) {
+	/**********Nav part*/
+	/*burger*/
+	span.navbar-toggler-icon {
+		opacity: 1;
+	}
+	/*li*/
 	nav li {
 		font-size: 0.8rem;
 	}
+	/**********us part*/
 	.figure-content {
 		flex-direction: column !important;
 		align-items: center !important;
