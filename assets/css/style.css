@@ -209,6 +209,9 @@ header {
 
 /* Media Queries */
 @media screen and (max-width: 840px) {
+	nav li {
+		font-size: 0.8rem;
+	}
 	.figure-content {
 		flex-direction: column !important;
 		align-items: center !important;
