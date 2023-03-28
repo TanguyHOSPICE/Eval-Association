@@ -7,6 +7,9 @@
 	align-items: center;
 	color: white;
 }
+textarea {
+	opacity: 1;
+}
 /* btn */
 .btn-contact-send {
 	background: #ffffff00;
@@ -31,6 +34,9 @@
 	background: #141414 !important;
 }
 /* form */
+textarea {
+	opacity: 1;
+}
 .form-control {
 	border-bottom: white solid 2px !important;
 	border-top: none !important;
@@ -56,9 +62,10 @@
 }
 
 /* Block masked */
-#join-checked,
-#payment-row {
-	visibility: hidden; /* !provisoire */
+#joinChecked,
+#paymentRow {
+	display: none;
+	/* visibility: hidden !important; */
 }
 
 span {
@@ -67,9 +74,13 @@ span {
 	color: red;
 	transition: 0.3s;
 	opacity: 0;
-	visibility: hidden;
+	visibility: visible;
 }
 
+.email-container > span {
+	border: red solid 1px;
+	color: red !important;
+}
 .error input {
 	color: red !important;
 	border: 1 px solid rgba(255, 0, 0, 0.527) !important;
@@ -78,4 +89,9 @@ span {
 	opacity: 1 !important;
 	visibility: visible;
 	color: red !important;
+}
+input[type='number'] {
+	min-width: 50px;
+	max-width: 100px;
+	height: 20px;
 }

@@ -2,30 +2,75 @@
 const inputRadios = document.querySelectorAll('input#join, input#contact, input#donate');
 
 //Email & text inputs
-const allInputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+const allInputs = document.querySelectorAll('input[type="text"], textarea');
 
 //form
 const form = document.querySelector('form');
 
-let lastname, firstname, email, messageArea;
+let lastname, firstname, email, messageBox;
 
-//fonction pour changer l'attribut checked
+//fonction change attribute checked
 const changeAttribute = () => {
-	checkContent.addEventListener('change', (e) => {
-		//Boucle pour parcourir les inputs radio
+	checkContent.addEventListener('click', (e) => {
+		//Loop into the inputs radio
 		for (let i = 0; i < inputRadios.length; i++) {
-			//Si l'input radio n'est pas le même que celui coché
-			if (inputRadios[i].id !== inputRadios[i].checked) {
-				//Alors on enlève l'attribut checked
+			if (!inputRadios[i].checked) {
 				inputRadios[i].removeAttribute('checked', '');
-				//Et on ajoute l'attribut checked à l'input radio coché
 				e.target.setAttribute('checked', 'true');
 			}
 		}
 	});
 };
+changeAttribute();
 
-const inputRadiosDisplay = () => {};
+//Function display form
+const inputRadiosDisplay = () => {
+	let textarea = document.querySelector('textarea');
+	const contact = document.querySelector('input#contact');
+	const join = document.querySelector('input#join');
+	const donate = document.querySelector('input#donate');
+
+	//
+	contact.addEventListener('input', (e) => {
+		if (e.target.id === 'contact' && e.target.checked === true) {
+			changeAttribute();
+			joinChecked.style.visibility = 'hidden';
+			paymentRow.style.visibility = 'hidden';
+
+			textarea.style.display = 'block';
+		} else {
+			textarea.style.display = 'none';
+		}
+	});
+	join.addEventListener('input', (e) => {
+		if (e.target.id === 'join' && e.target.checked === true) {
+			changeAttribute();
+			joinChecked.style.display = 'block';
+			joinChecked.style.visibility = 'visible';
+			paymentRow.style.visibility = 'hidden';
+			paymentRow.style.display = 'none';
+			textarea.style.display = 'none';
+		} else {
+			joinChecked.style.visibility = 'hidden';
+			textarea.style.display = 'none';
+		}
+	});
+	donate.addEventListener('input', (e) => {
+		if (e.target.id === 'donate' && e.target.checked === true) {
+			changeAttribute();
+			paymentRow.style.visibility = 'visible';
+			paymentRow.style.display = 'block';
+			joinChecked.style.visibility = 'hidden';
+			joinChecked.style.display = 'none';
+			textarea.style.display = '';
+		} else {
+			textarea.style.display = 'block';
+			paymentRow.style.visibility = 'hidden';
+			paymentRow.style.display = '';
+		}
+	});
+};
+inputRadiosDisplay();
 
 //Functions display error message
 const errorDisplay = (tag, message, valid) => {
@@ -69,7 +114,7 @@ const firstnameChecker = (value) => {
 };
 //Function for email address
 const emailChecker = (value) => {
-	if (!value.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)) {
+	if (!value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i)) {
 		errorDisplay('email', "L'e-mail n'est pas valide.");
 		email = null;
 	} else {
@@ -81,10 +126,10 @@ const emailChecker = (value) => {
 const messageAreaChecker = (value) => {
 	if (value.length > 0 && value.length < 10) {
 		errorDisplay('messageAera', 'Veuillez saisir au moins 10 caractères pour le champ du message.');
-		messageArea = null;
+		messageBox = null;
 	} else {
-		errorDisplay('messageAera', '', true);
-		messageArea = value;
+		errorDisplay('messageAera', ' ', true);
+		messageBox = value;
 	}
 };
 //Function for checking values of all inputs
@@ -113,18 +158,28 @@ allInputs.forEach((inputChoiced) => {
 });
 
 form.addEventListener('submit', (e) => {
+	console.log(e.target.value);
 	e.preventDefault();
 	// If all inputs are valid then send data "to the server"
-	if (lastname && firstname && email && messageArea) {
-		const data = { lastname, firstname, email, messageArea };
+	if (lastname && firstname) {
+		const data = {
+			lastname,
+			firstname,
+			email,
+			messageBox,
+		};
 		console.log(data);
 		// Reset all inputs
+		allInputs.forEach((input) => {
+			input.value = '';
+		});
+
 		lastname = null;
 		firstname = null;
 		email = null;
-		messageArea = null;
+		messageBox = null;
 		alert("Formulaire validé pour l'exercice !");
 	} else {
-		alert('Tous les champs ne sont pas valides.');
+		console.log('Tous les champs ne sont pas valides.');
 	}
 });

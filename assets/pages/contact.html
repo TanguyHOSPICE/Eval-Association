@@ -68,19 +68,19 @@
           <!-- Sign Up -->
           <div class="check-content" id="checkContent">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="join" id="join">
+              <input class="form-check-input" type="radio" name="contact" id="join" value="join">
               <label class="form-check-label" for="join">
                 Adhérer
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="contact" id="contact" checked>
+              <input class="form-check-input" type="radio" name="contact" id="contact" value="contact" checked>
               <label class="form-check-label" for="contact">
                 Nous contacter
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="donate" id="donate">
+              <input class="form-check-input" type="radio" name="contact" id="donate" value="donate">
               <label class="form-check-label" for="donate">
                 Participer
               </label>
@@ -121,25 +121,46 @@
               <div class="row" id="email-row">
                 <div class="col-lg-12 ">
                   <div class="email-container">
-                    <input type="email" name="email" class="form-control text-white my-4" placeholder="Votre email"
-                      autocomplete="off" />
+                    <input type="text" id="email" name="email" class="form-control text-white my-4"
+                      placeholder="Votre email" autocomplete="off" />
+                    <span></span>
                   </div>
                   <div class="messageArea-container">
                     <textarea id="messageArea" class="form-control text-white" placeholder="Message" rows="5"
                       autocomplete="off"></textarea>
+                    <span></span>
                   </div>
-                  <span></span>
                 </div>
               </div>
 
               <!-- TODO: MF.5 & 6 Create card / insert payment row if donate checked -->
               <!-- Payment Card -->
-              <div class="row" id="payment-row"></div>
+              <div class="row" id="paymentRow"><!-- Join checked row -->
+                <div class="row">
+                  <!-- form separator -->
+                  <div class="px-5 py-5 text-center text-white">
+                    <br>
+                    <div class="separateur separateur-center white"></div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="check-content">
+                      <div class="form-check">
+                        <input class="form-check-input" type="number" name="amount" id="amount" min="1" max="1000">
+                        <label class="form-check-label" for="amount">
+                          €
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
 
 
-              <!-- TODO: MF.2 insert Join checked row -->
+
               <!-- Join checked row -->
-              <div class="row" id="join-checked">
+              <div class="row" id="joinChecked">
                 <!-- form separator -->
                 <div class="px-5 py-5 text-center text-white">
                   <br>
@@ -148,19 +169,19 @@
                 <div class="col-lg-12">
                   <div class="check-content">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="month" id="month">
+                      <input class="form-check-input" type="radio" name="period" id="month">
                       <label class="form-check-label" for="month">
                         1 mois
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="half-month" id="half-month">
+                      <input class="form-check-input" type="radio" name="period" id="half-month">
                       <label class="form-check-label" for="half-month">
                         6 mois
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="year" id="year">
+                      <input class="form-check-input" type="radio" name="period" id="year">
                       <label class="form-check-label" for="year">
                         1 an
                       </label>
