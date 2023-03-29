@@ -25,36 +25,51 @@
 .input-box input {
 	margin-right: 5px;
 }
+.input-box[type='radio'] > label {
+	font-size: 0.8rem;
+	width: 100%;
+}
 .select-container-departement {
 	width: 50% !important;
 }
 
 /* Card */
-ul#group-filter {
+ul#group_filter {
+	display: flex;
+	flex-direction: column;
 	padding: 0;
 	min-height: 160px;
 	margin-bottom: 10px;
 }
-ul#group-filter > .row {
-	display: inline-block;
+ul#group_filter .row-filter {
 	width: 100%;
 }
-#group-filter li.card {
-	min-height: 180px;
+#group_filter li.card {
+	max-height: 100%;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
 }
-#group-filter a {
-	text-decoration: none;
+#group_filter a {
 	color: black !important;
-	display: block;
+	display: flex;
 	overflow: hidden;
-	text-align: center;
-	width: 460px;
+	width: 100%;
+	max-height: 400px;
+}
+.img-container {
+	width: 50%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 img {
-	width: 240px;
-	height: 180px;
+	display: block;
+	max-width: 90%;
+	height: 80%;
+	/* text-align: center; */
 	object-fit: cover;
 	outline: none !important;
 	border: none !important;
@@ -62,13 +77,8 @@ img {
 .left-part-list {
 	padding-left: 25px;
 }
-/* .card-body {
-	flex-direction: column;
-	align-items: center;
-	font-size: 0.75rem;
-} */
 .card-body .regions {
-	text-align: left;
+	/* text-align: left; */
 	font-weight: bolder;
 	text-transform: uppercase;
 	color: #383939;
@@ -93,7 +103,7 @@ img {
 	height: 50px;
 	width: 50px;
 	padding-top: 1px;
-	margin-right: 10px;
+	margin: 0 10px 10px 0;
 	border-radius: 50% 50%;
 	font-weight: bolder;
 	font-size: 12px;
@@ -118,19 +128,45 @@ img {
 }
 
 /* Responsiv */
-@media screen and (max-width: 991px) {
-	#group_filter a img {
-		display: block;
-		max-width: 100%;
-		height: auto;
+@media screen and (max-width: 768px) {
+	#group_filter > .row {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		padding: 5px;
 	}
-	.actu-title {
-		height: 40px;
+	li.card {
+		width: 100%;
+		min-height: 200px;
+	}
+	.card a {
+		height: 100%;
+	}
+	.card-body {
+		height: 100%;
+	}
+	.regions {
+		text-align: left;
 	}
 }
-@media (min-width: 768px) {
-	.col-sm-6 {
-		float: right;
-		width: 50%;
+@media screen and (max-width: 600px) {
+	.select-container-departement {
+		padding-left: 5px;
+		text-align: center;
+	}
+	li.card {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.img-container {
+		width: 100%;
+		height: 200px;
+	}
+	.card-body {
+		width: 80%;
 	}
 }
