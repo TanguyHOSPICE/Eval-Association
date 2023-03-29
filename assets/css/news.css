@@ -85,16 +85,6 @@ img {
 	padding-bottom: 10px;
 	position: relative;
 }
-.card-body .regions::after {
-	position: absolute;
-	content: ' ';
-	height: 10px;
-	width: 100%;
-	color: red;
-	top: 0;
-	left: 0;
-	transform: translate(50%, 50%);
-}
 .card-body .actu-date {
 	color: rgba(255, 254, 254, 0.913);
 	background: #383939;
