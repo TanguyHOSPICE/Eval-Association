@@ -1,3 +1,5 @@
+/* **Not necessary and Not Finish (espère une "correction" ou conseils)** */
+
 // Inputs radio Join , Contact , Donate
 const inputRadios = document.querySelectorAll('input#join, input#contact, input#donate');
 
